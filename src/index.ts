@@ -8,3 +8,4 @@ const westBranch = new Branch('West Branch');
 const customer1 = new Customer('John');
 
 console.log(arizonaBank, westBranch, customer1);
+console.log(customer1.getBalance());

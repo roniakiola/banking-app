@@ -1,5 +1,3 @@
-import Bank from './bank';
-import Branch from './branch';
 import Transaction from './transaction';
 
 export default class Customer {
