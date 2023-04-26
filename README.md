@@ -1,6 +1,6 @@
 # Introduction
 
-Learning to use TypeScript typing, class and methods.
+Small mock up banking app for learning to use TypeScript types, class and methods. <br>
 
 ## Table of contents
 
