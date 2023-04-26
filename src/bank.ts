@@ -25,4 +25,15 @@ export default class Bank {
       return true;
     }
   }
+  addCustomerTransaction(branch: Branch, id: string, amount: number): boolean {
+    if (this.checkBranch(branch)) {
+      const customer = branch.findCustomer(id);
+      customer?.addTransaction(amount);
+      return true;
+    }
+    return false;
+  }
+  checkBranch(branch: Branch): boolean {
+    return this.branches.includes(branch) ? true : false;
+  }
 }
