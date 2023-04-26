@@ -50,8 +50,9 @@ export default class Bank {
         const name = customer.getName();
         const id = customer.getId();
         const trans = customer.getTransactions();
+        const bal = customer.getBalance();
         const details = [];
-        details.push(id, name, trans);
+        details.push(id, name, trans, bal);
         console.log(details);
       });
       return true;
