@@ -8,14 +8,19 @@ class Bank {
   addBranch = (branch: Branch): boolean => {
     if (this.branches.includes(branch)) {
       return false;
+    } else {
+      this.branches.push(branch);
+      return true;
     }
-    this.branches.push(branch);
-    return true;
     // this.branches.includes(branch) ? false : this.branches.push(branch) && true;
   };
   addCustomer = (branch: Branch, customer: Customer): boolean => {
-    if  (this.)
-  }
+    if (branch.customers.includes(customer)) {
+      return false;
+    } else {
+      branch.customers.push(customer);
+    }
+  };
 }
 
 export default Bank;
