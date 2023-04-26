@@ -36,4 +36,26 @@ export default class Bank {
   checkBranch(branch: Branch): boolean {
     return this.branches.includes(branch) ? true : false;
   }
+  findBranchByName(name: string) {
+    return this.branches.filter((branch) => branch.getName() === name);
+  }
+  listCustomers(branch: Branch, displayTransAct: boolean): boolean {
+    const foundBranch = this.checkBranch(branch);
+    if (!foundBranch) {
+      return false;
+    }
+    if (foundBranch && displayTransAct) {
+      const customers = branch.getCustomers();
+      customers.forEach((customer) => {
+        const name = customer.getName();
+        const id = customer.getId();
+        const trans = customer.getTransactions();
+        const details = [];
+        details.push(id, name, trans);
+        console.log(details);
+      });
+      return true;
+    }
+    return true;
+  }
 }
