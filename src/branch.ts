@@ -25,4 +25,11 @@ export default class Branch {
     this.customers.push(customer);
     return true;
   }
+  // addCustomerTransaction(id: string, amount: number): boolean {
+  //   if (this.findCustomer(id)) {
+  //   }
+  // }
+  findCustomer(id: string) {
+    return this.customers.find((customer) => customer.getId() === id) || null;
+  }
 }
