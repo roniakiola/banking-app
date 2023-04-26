@@ -11,4 +11,8 @@ arizonaBank.addCustomer(westBranch, customer1);
 
 console.log(arizonaBank, westBranch, customer1);
 console.log(westBranch.findCustomer(customer1.getId()));
+customer1.addTransaction(1000);
 console.log(customer1.getBalance());
+customer1.addTransaction(-500);
+console.log(customer1.getBalance());
+console.log(customer1.getTransactions());
