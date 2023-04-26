@@ -47,13 +47,8 @@ export default class Bank {
     if (foundBranch && displayTransAct) {
       const customers = branch.getCustomers();
       customers.forEach((customer) => {
-        const name = customer.getName();
-        const id = customer.getId();
-        const trans = customer.getTransactions();
-        const bal = customer.getBalance();
-        const details = [];
-        details.push(id, name, trans, bal);
-        console.log(details);
+        let customerId = customer.getId();
+        console.log(branch.findCustomer(customerId), customer.getBalance());
       });
       return true;
     }

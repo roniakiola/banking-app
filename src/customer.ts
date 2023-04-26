@@ -5,7 +5,7 @@ export default class Customer {
   private id: string;
   private transactions: Transaction[];
   constructor(name: string) {
-    this.id = String(Date.now());
+    this.id = String(Date.now() + Math.floor(Math.random() * 100));
     this.name = name;
     this.transactions = [];
   }
