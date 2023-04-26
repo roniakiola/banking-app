@@ -11,4 +11,25 @@ export default class Customer {
     this.name = name;
     this.transactions = [];
   }
+  getName() {
+    this.name;
+  }
+  getId() {
+    this.id;
+  }
+  getTransactions() {
+    this.transactions;
+  }
+  getBalance() {
+    //b.amount = transaction.amount
+    return this.transactions.reduce((a, b) => a + b.amount, 0);
+  }
+  addTransaction(amount: number): boolean {
+    if (this.getBalance() + amount >= 0) {
+      const newTransaction = { amount, date: new Date() };
+      this.transactions.push(newTransaction);
+      return true;
+    }
+    return false;
+  }
 }
