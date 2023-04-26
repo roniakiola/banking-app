@@ -1,4 +1,8 @@
-class Customer {
+import Bank from './bank';
+import Branch from './branch';
+import Transaction from './transaction';
+
+export default class Customer {
   private name: string;
   private id: string;
   private transactions: Transaction[];

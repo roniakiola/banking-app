@@ -1,4 +1,7 @@
-class Bank {
+import Customer from './customer';
+import Branch from './branch';
+
+export default class Bank {
   private name: string;
   private branches: Branch[];
   constructor(name: string) {
@@ -15,10 +18,11 @@ class Bank {
     // this.branches.includes(branch) ? false : this.branches.push(branch) && true;
   };
   addCustomer = (branch: Branch, customer: Customer): boolean => {
-    if (branch.customers.includes(customer)) {
+    if (branch.getCustomers().includes(customer)) {
       return false;
     } else {
-      branch.customers.push(customer);
+      branch.getCustomers().push(customer);
+      return true;
     }
   };
 }
