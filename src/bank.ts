@@ -8,7 +8,7 @@ export default class Bank {
     this.name = name;
     this.branches = [];
   }
-  addBranch = (branch: Branch): boolean => {
+  addBranch(branch: Branch): boolean {
     if (this.branches.includes(branch)) {
       return false;
     } else {
@@ -16,13 +16,13 @@ export default class Bank {
       return true;
     }
     // this.branches.includes(branch) ? false : this.branches.push(branch) && true;
-  };
-  addCustomer = (branch: Branch, customer: Customer): boolean => {
+  }
+  addCustomer(branch: Branch, customer: Customer): boolean {
     if (branch.getCustomers().includes(customer)) {
       return false;
     } else {
       branch.getCustomers().push(customer);
       return true;
     }
-  };
+  }
 }

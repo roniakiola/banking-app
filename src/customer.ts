@@ -10,13 +10,13 @@ export default class Customer {
     this.transactions = [];
   }
   getName() {
-    this.name;
+    return this.name;
   }
   getId() {
-    this.id;
+    return this.id;
   }
   getTransactions() {
-    this.transactions;
+    return this.transactions;
   }
   getBalance() {
     //b.amount = transaction.amount
